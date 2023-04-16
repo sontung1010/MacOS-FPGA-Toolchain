@@ -58,3 +58,12 @@ $dumpvars;
 vvp <name of result file>
 ```
 ![sim_demo](sim_demo.png)
+
+### Demo Simulation with VSCode or GTKwave
+#### Installation
+##### Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.)
+##### Or install gtkwave using brew
+```
+brew install --cask gtkwave
+```
+#### Demo
