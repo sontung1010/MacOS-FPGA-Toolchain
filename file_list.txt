@@ -10,3 +10,4 @@ InputRead.v
 mux2to1.v
 muxAN.v
 SevenSegments.v
+ALU_Design_test.v

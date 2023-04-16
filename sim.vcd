@@ -1,0 +1,633 @@
+$date
+	Sun Apr 16 11:15:37 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module ALU_test $end
+$var wire 7 ! hexdisp [6:0] $end
+$var wire 4 " LEDOut [3:0] $end
+$var wire 8 # AN [7:0] $end
+$var reg 3 $ Btn [2:0] $end
+$var reg 16 % Sw [15:0] $end
+$scope module uut $end
+$var wire 3 & Btn [2:0] $end
+$var wire 16 ' Sw [15:0] $end
+$var wire 9 ( subtractor [8:0] $end
+$var wire 1 ) ss_sel $end
+$var wire 1 * sel $end
+$var wire 7 + hexdisp [6:0] $end
+$var wire 4 , eightmuxOut [3:0] $end
+$var wire 9 - adder [8:0] $end
+$var wire 8 . Sum [7:0] $end
+$var wire 1 / Output $end
+$var wire 9 0 Out [8:0] $end
+$var wire 8 1 OpY [7:0] $end
+$var wire 8 2 OpX [7:0] $end
+$var wire 4 3 LEDOut [3:0] $end
+$var wire 8 4 Diff [7:0] $end
+$var wire 1 5 Cout $end
+$var wire 1 6 Cin $end
+$var wire 1 7 Bout $end
+$var wire 8 8 AN [7:0] $end
+$scope module Add1 $end
+$var wire 1 6 RCOCarryIn $end
+$var wire 8 9 RCOAddY [7:0] $end
+$var wire 8 : RCOAddX [7:0] $end
+$var reg 1 5 RCOCarryOut $end
+$var reg 8 ; RCOSum [7:0] $end
+$upscope $end
+$scope module DO $end
+$var wire 1 < DataOut $end
+$var wire 1 / DataIn $end
+$upscope $end
+$scope module In0 $end
+$var wire 3 = Btn [2:0] $end
+$var wire 1 6 Cin $end
+$var wire 16 > Sw [15:0] $end
+$var wire 1 * sel $end
+$var wire 1 ) ss_sel $end
+$var wire 8 ? InputY [7:0] $end
+$var wire 8 @ InputX [7:0] $end
+$upscope $end
+$scope module SS $end
+$var wire 4 A hexOut [3:0] $end
+$var reg 7 B disp [6:0] $end
+$upscope $end
+$scope module Sub1 $end
+$var wire 1 6 RCOBorrowIn $end
+$var wire 8 C RCOSubX [7:0] $end
+$var wire 8 D RCOSubY [7:0] $end
+$var wire 8 E RCODiff [7:0] $end
+$var wire 1 7 RCOBorrowOut $end
+$var wire 1 F B7 $end
+$var wire 1 G B6 $end
+$var wire 1 H B5 $end
+$var wire 1 I B4 $end
+$var wire 1 J B3 $end
+$var wire 1 K B2 $end
+$var wire 1 L B1 $end
+$scope module RCO_FS0 $end
+$var wire 1 6 Bin $end
+$var wire 1 L Bout $end
+$var wire 1 M Xin $end
+$var wire 1 N Yin $end
+$var wire 1 O Diff $end
+$var wire 1 P D1 $end
+$var wire 1 Q B2 $end
+$var wire 1 R B1 $end
+$scope module HS1 $end
+$var wire 1 R BorrowHalf $end
+$var wire 1 P DiffHalf $end
+$var wire 1 M Xhalf $end
+$var wire 1 N Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 Q BorrowHalf $end
+$var wire 1 O DiffHalf $end
+$var wire 1 P Xhalf $end
+$var wire 1 6 Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS1 $end
+$var wire 1 L Bin $end
+$var wire 1 K Bout $end
+$var wire 1 S Xin $end
+$var wire 1 T Yin $end
+$var wire 1 U Diff $end
+$var wire 1 V D1 $end
+$var wire 1 W B2 $end
+$var wire 1 X B1 $end
+$scope module HS1 $end
+$var wire 1 X BorrowHalf $end
+$var wire 1 V DiffHalf $end
+$var wire 1 S Xhalf $end
+$var wire 1 T Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 W BorrowHalf $end
+$var wire 1 U DiffHalf $end
+$var wire 1 V Xhalf $end
+$var wire 1 L Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS2 $end
+$var wire 1 K Bin $end
+$var wire 1 J Bout $end
+$var wire 1 Y Xin $end
+$var wire 1 Z Yin $end
+$var wire 1 [ Diff $end
+$var wire 1 \ D1 $end
+$var wire 1 ] B2 $end
+$var wire 1 ^ B1 $end
+$scope module HS1 $end
+$var wire 1 ^ BorrowHalf $end
+$var wire 1 \ DiffHalf $end
+$var wire 1 Y Xhalf $end
+$var wire 1 Z Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 ] BorrowHalf $end
+$var wire 1 [ DiffHalf $end
+$var wire 1 \ Xhalf $end
+$var wire 1 K Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS3 $end
+$var wire 1 J Bin $end
+$var wire 1 I Bout $end
+$var wire 1 _ Xin $end
+$var wire 1 ` Yin $end
+$var wire 1 a Diff $end
+$var wire 1 b D1 $end
+$var wire 1 c B2 $end
+$var wire 1 d B1 $end
+$scope module HS1 $end
+$var wire 1 d BorrowHalf $end
+$var wire 1 b DiffHalf $end
+$var wire 1 _ Xhalf $end
+$var wire 1 ` Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 c BorrowHalf $end
+$var wire 1 a DiffHalf $end
+$var wire 1 b Xhalf $end
+$var wire 1 J Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS4 $end
+$var wire 1 I Bin $end
+$var wire 1 H Bout $end
+$var wire 1 e Xin $end
+$var wire 1 f Yin $end
+$var wire 1 g Diff $end
+$var wire 1 h D1 $end
+$var wire 1 i B2 $end
+$var wire 1 j B1 $end
+$scope module HS1 $end
+$var wire 1 j BorrowHalf $end
+$var wire 1 h DiffHalf $end
+$var wire 1 e Xhalf $end
+$var wire 1 f Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 i BorrowHalf $end
+$var wire 1 g DiffHalf $end
+$var wire 1 h Xhalf $end
+$var wire 1 I Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS5 $end
+$var wire 1 H Bin $end
+$var wire 1 G Bout $end
+$var wire 1 k Xin $end
+$var wire 1 l Yin $end
+$var wire 1 m Diff $end
+$var wire 1 n D1 $end
+$var wire 1 o B2 $end
+$var wire 1 p B1 $end
+$scope module HS1 $end
+$var wire 1 p BorrowHalf $end
+$var wire 1 n DiffHalf $end
+$var wire 1 k Xhalf $end
+$var wire 1 l Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 o BorrowHalf $end
+$var wire 1 m DiffHalf $end
+$var wire 1 n Xhalf $end
+$var wire 1 H Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS6 $end
+$var wire 1 G Bin $end
+$var wire 1 F Bout $end
+$var wire 1 q Xin $end
+$var wire 1 r Yin $end
+$var wire 1 s Diff $end
+$var wire 1 t D1 $end
+$var wire 1 u B2 $end
+$var wire 1 v B1 $end
+$scope module HS1 $end
+$var wire 1 v BorrowHalf $end
+$var wire 1 t DiffHalf $end
+$var wire 1 q Xhalf $end
+$var wire 1 r Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 u BorrowHalf $end
+$var wire 1 s DiffHalf $end
+$var wire 1 t Xhalf $end
+$var wire 1 G Yhalf $end
+$upscope $end
+$upscope $end
+$scope module RCO_FS7 $end
+$var wire 1 F Bin $end
+$var wire 1 7 Bout $end
+$var wire 1 w Xin $end
+$var wire 1 x Yin $end
+$var wire 1 y Diff $end
+$var wire 1 z D1 $end
+$var wire 1 { B2 $end
+$var wire 1 | B1 $end
+$scope module HS1 $end
+$var wire 1 | BorrowHalf $end
+$var wire 1 z DiffHalf $end
+$var wire 1 w Xhalf $end
+$var wire 1 x Yhalf $end
+$upscope $end
+$scope module HS2 $end
+$var wire 1 { BorrowHalf $end
+$var wire 1 y DiffHalf $end
+$var wire 1 z Xhalf $end
+$var wire 1 F Yhalf $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module comp $end
+$var wire 8 } A [7:0] $end
+$var wire 8 ~ B [7:0] $end
+$var reg 1 !" A_eq_B $end
+$var reg 1 "" A_gt_B $end
+$var reg 1 #" A_lt_B $end
+$upscope $end
+$scope module eightmux $end
+$var wire 1 ) sel $end
+$var wire 9 $" in [8:0] $end
+$var reg 4 %" out [3:0] $end
+$upscope $end
+$scope module muxAdderSubtractor $end
+$var wire 9 &" A [8:0] $end
+$var wire 9 '" B [8:0] $end
+$var wire 1 * sel $end
+$var reg 9 (" out_8 [8:0] $end
+$upscope $end
+$scope module muxCarryinBorrowin $end
+$var wire 1 7 A $end
+$var wire 1 5 B $end
+$var wire 1 * sel $end
+$var reg 1 / out $end
+$upscope $end
+$scope module muxan $end
+$var wire 1 ) btn $end
+$var wire 9 )" in [8:0] $end
+$var reg 8 *" out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11111110 *"
+b0 )"
+b0 ("
+bx '"
+bx &"
+bx %"
+b0 $"
+0#"
+0""
+1!"
+b0 ~
+b0 }
+0|
+x{
+0z
+xy
+0x
+0w
+0v
+xu
+0t
+xs
+0r
+0q
+0p
+xo
+0n
+xm
+0l
+0k
+0j
+xi
+0h
+xg
+0f
+0e
+0d
+xc
+0b
+xa
+0`
+0_
+0^
+x]
+0\
+x[
+0Z
+0Y
+0X
+xW
+0V
+xU
+0T
+0S
+0R
+xQ
+0P
+xO
+0N
+0M
+xL
+xK
+xJ
+xI
+xH
+xG
+xF
+bx E
+b0 D
+b0 C
+bx B
+bx A
+b0 @
+b0 ?
+b0 >
+bx =
+x<
+bx ;
+b0 :
+b0 9
+b11111110 8
+x7
+x6
+x5
+bx 4
+bx100 3
+b0 2
+b0 1
+b0 0
+x/
+bx .
+bx -
+bx ,
+bx +
+x*
+x)
+bx (
+b0 '
+bx &
+b0 %
+bx $
+b11111110 #
+bx100 "
+bx !
+$end
+#3100000
+0<
+1/
+17
+1y
+1{
+1F
+1s
+1u
+1G
+1m
+1o
+1H
+1g
+1i
+b111111xxx 0
+b111111xxx $"
+b111111xxx ("
+b111111xxx )"
+1I
+0]
+b111111xxx (
+b111111xxx &"
+b11111xxx 4
+b11111xxx E
+1a
+1c
+1J
+1\
+1^
+1Z
+0!"
+b1 "
+b1 3
+1#"
+b100 1
+b100 9
+b100 ?
+b100 D
+b100 ~
+b100 %
+b100 '
+b100 >
+#4100000
+b111110xxx 0
+b111110xxx $"
+b111110xxx ("
+b111110xxx )"
+0c
+b111110xxx (
+b111110xxx &"
+b11110xxx 4
+b11110xxx E
+0a
+1b
+1d
+1`
+b1100 1
+b1100 9
+b1100 ?
+b1100 D
+b1100 ~
+b1100 %
+b1100 '
+b1100 >
+#6100000
+b111010xxx 0
+b111010xxx $"
+b111010xxx ("
+b111010xxx )"
+0o
+b111010xxx (
+b111010xxx &"
+b11010xxx 4
+b11010xxx E
+0m
+1n
+1p
+1l
+b101100 1
+b101100 9
+b101100 ?
+b101100 D
+b101100 ~
+b101100 %
+b101100 '
+b101100 >
+#8100000
+b101010xxx 0
+b101010xxx $"
+b101010xxx ("
+b101010xxx )"
+0{
+b101010xxx (
+b101010xxx &"
+b1010xxx 4
+b1010xxx E
+0y
+1z
+1|
+1x
+b10101100 1
+b10101100 9
+b10101100 ?
+b10101100 D
+b10101100 ~
+b10101100 %
+b10101100 '
+b10101100 >
+#10100000
+b1010101xx 0
+b1010101xx $"
+b1010101xx ("
+b1010101xx )"
+b1010101xx (
+b1010101xx &"
+b10101xx 4
+b10101xx E
+1[
+0K
+0W
+1V
+1S
+b10 2
+b10 :
+b10 @
+b10 C
+b10 }
+b1010101100 %
+b1010101100 '
+b1010101100 >
+#13100000
+1m
+0H
+b1011001xx 0
+b1011001xx $"
+b1011001xx ("
+b1011001xx )"
+0i
+b1011001xx (
+b1011001xx &"
+b11001xx 4
+b11001xx E
+0g
+1h
+1e
+b10010 2
+b10010 :
+b10010 @
+b10010 C
+b10010 }
+b1001010101100 %
+b1001010101100 '
+b1001010101100 >
+#14100000
+1y
+0F
+0s
+0u
+b1100001xx 0
+b1100001xx $"
+b1100001xx ("
+b1100001xx )"
+0G
+b1100001xx (
+b1100001xx &"
+b100001xx 4
+b100001xx E
+0m
+0p
+0n
+1k
+b110010 2
+b110010 :
+b110010 @
+b110010 C
+b110010 }
+b11001010101100 %
+b11001010101100 '
+b11001010101100 >
+#15100000
+b1110001xx 0
+b1110001xx $"
+b1110001xx ("
+b1110001xx )"
+b1110001xx (
+b1110001xx &"
+b110001xx 4
+b110001xx E
+1s
+1t
+1q
+b1110010 2
+b1110010 :
+b1110010 @
+b1110010 C
+b1110010 }
+b111001010101100 %
+b111001010101100 '
+b111001010101100 >
+#17100000
+1U
+0L
+b111000110 0
+b111000110 $"
+b111000110 ("
+b111000110 )"
+b111000110 (
+b111000110 &"
+b11000110 4
+b11000110 E
+0O
+0Q
+15
+b100011110 -
+b100011110 '"
+b11110 .
+b11110 ;
+06
+bx1 $
+bx1 &
+bx1 =
+#18100000
+0*
+bx11 $
+bx11 &
+bx11 =
+#19100000
+b110000 !
+b110000 +
+b110000 B
+b1100 ,
+b1100 A
+b1100 %"
+b11111101 #
+b11111101 8
+b11111101 *"
+0)
+b111 $
+b111 &
+b111 =
+#20100000

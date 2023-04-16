@@ -57,3 +57,4 @@ $dumpvars;
 ```
 vvp <name of result file>
 ```
+![sim_demo](sim_demo.png)
