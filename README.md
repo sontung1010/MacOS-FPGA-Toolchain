@@ -1,6 +1,8 @@
 # MacOS FPGA Toolchain Demo (in progress)
 
 ## About
+#### This is my personal compilation of FPGA development toolchain for MacOS.
+#### This project is not completed because I used the Xilinx Nexys A7 and currently there are  no tools that can generate bitstream for this board on MacOS. However, many other boards already had their support from [F4PGA](https://github.com/f4pga) and I am also waiting for them to support the Nexys A7 with their [prjxray](https://github.com/f4pga/prjxray) project. Please read this document as reference as you may need to change the suitable bitstream generation tool for yourself.
 
 ## Workflow and Installation
 ### Write code using Vim with [Verilog syntax](https://github.com/vhda/verilog_systemverilog.vim)
@@ -169,3 +171,28 @@ netlistsvg <input_json_file.json> -o <output_svg_file.svg>
 ```
 ##### Double click on the new generated .svg file
 ![svg](svg.png)
+
+### Generate Bitstream (still in progress for Xilinx Nexys A7)
+#### Please check [F4PGA](https://github.com/f4pga) for more information about other boards bitstream generation.
+#### Currently, the only way to generate bitstream is to install a virtual machine of Ubuntu or Window on your Mac run Vivado on there to get the .bit file, which defeat the purpose of this research. Also, keep in mind that Vivado can only be installed on amd architecture, which means if you are using an M1 Mac just like me, there are no solutions yet.
+
+### Upload the .bit file to the board with [openFPGALoader](https://github.com/trabucayre/openFPGALoader) (supposing you have a .bit file somehow)
+#### In this part, I test by getting the .bit file from my Vivado on other PC.
+#### Installation
+```
+brew install openfpgaloader
+```
+
+#### Demo
+##### Run the following command to check if your board is supported
+```
+openFPGALoader --list-boards
+```
+##### Upload the .bit file to your board with 2 options
+##### Simply replace my_fpga_board with your board name in the generated list after run the above command
+```
+#program to SRAM (faster but not persistent)
+openFPGALoader -b my_fpga_board my_bitstream.bit
+#flash (slower but persistent)
+openFPGALoader -b my_fpga_board -f my_bitstream.bit
+```
