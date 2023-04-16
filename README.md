@@ -72,11 +72,11 @@ brew install --cask gtkwave
 ```
 code .
 ```
-![demo1](vscode_demo1)
-![demo2](vscode_demo2)
+![demo1](vscode_demo1.png)
+![demo2](vscode_demo2.png)
 ###### Using WaveTrace, this will run automatically, but the free version only show up to 8 variables
 ```
 code sim.vcd
 ```
-![demo3](vscode_demo3)
+![demo3](vscode_demo3.png)
 
