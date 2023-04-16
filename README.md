@@ -84,8 +84,30 @@ code sim.vcd
 #### [Installation](https://github.com/YosysHQ/yosys)
 ##### Read more about OSS CAD Suite by YosysHQ [here](https://github.com/YosysHQ/oss-cad-suite-build)
 ##### Go to this [OSS CAD Suite release link](https://github.com/YosysHQ/oss-cad-suite-build/releases) and download your compatible version then extract it
-#### For MacOS
+##### For MacOS
 ```
-cd <PATH TO FOLDER WITH EXTRACTED FILES>
+cd <extracted_location/oss-cad-suite>
 ./activate
+cd ~
+source <extracted_location>/oss-cad-suite/environment
 ```
+##### The last command only available for current session, to make it always available please add the command to your shell script (zshrc)
+##### Start yosys console
+```
+yosys
+```
+Here are some commands I use for synthesis, have to be in this sequence
+```
+#read design
+read_verilog <file1.v> <file2.v> <file3.v>
+
+#elaborate design hierarchy
+hierarchy -check -top <name of top verilog file>
+
+#write synthesized design
+write_verilog <name of synthesized_design.v>
+
+```
+For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
+
+
