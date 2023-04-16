@@ -61,7 +61,7 @@ vvp <name of result file>
 
 ### Demo Simulation with VSCode or GTKwave
 #### Installation
-##### Option 1: Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.) then install the [TerosHDL extension](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl) or [WaveTrace extention](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace)
+##### Option 1: Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.), then install the [TerosHDL extension](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl) or [WaveTrace extention](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace)
 ##### Option 2: Using gtkwave using brew
 ```
 brew install --cask gtkwave
@@ -80,3 +80,12 @@ code sim.vcd
 ```
 ![demo3](vscode_demo3.png)
 
+### Synthesis with [Yosys](https://yosyshq.net/yosys/)
+#### [Installation](https://github.com/YosysHQ/yosys)
+##### Read more about OSS CAD Suite by YosysHQ [here](https://github.com/YosysHQ/oss-cad-suite-build)
+##### Go to this [OSS CAD Suite release link](https://github.com/YosysHQ/oss-cad-suite-build/releases) and download your compatible version then extract it
+#### For MacOS
+```
+cd <PATH TO FOLDER WITH EXTRACTED FILES>
+./activate
+```
