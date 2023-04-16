@@ -91,11 +91,12 @@ cd <extracted_location/oss-cad-suite>
 cd ~
 source <extracted_location>/oss-cad-suite/environment
 ```
-##### The last command only available for current session, to make it always available please add the command to your shell script (zshrc)
+##### The last command only makes the environment of OSS CAD Suite available for current session, to make it always available please add the command to your shell script (zshrc)
 ##### Start yosys console
 ```
 yosys
 ```
+![yosys](yosys_demo.png)
 Here are some commands I use for synthesis, have to be in this sequence
 ```
 #read design
@@ -104,10 +105,17 @@ read_verilog <file1.v> <file2.v> <file3.v>
 #elaborate design hierarchy
 hierarchy -check -top <name of top verilog file>
 
+#the high-level stuff, each of them can be one command separately
+proc; opt; fsm; opt; memory; opt
+
 #write synthesized design
+#this command generates synthesized_design.v file
 write_verilog <name of synthesized_design.v>
 
 ```
 For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
 
-
+![yosys1](read_verilog.png)
+![yosys2](hierarchy.png)
+![yosys4](proc.png)
+![yosys4](write_verilog.png)
