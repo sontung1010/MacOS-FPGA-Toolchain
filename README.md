@@ -68,7 +68,7 @@ brew install --cask gtkwave
 ```
 #### Demo
 ##### Option 1: Open .vcd file using VSCode
-###### Using TerosHDL: Open VSCode using the following command then right click on .vcd file, select ""
+###### Using TerosHDL: Open VSCode using the following command then right click on .vcd file, select "Open with waveform viewer"
 ```
 code .
 ```
@@ -79,6 +79,12 @@ code .
 code sim.vcd
 ```
 ![demo3](vscode_demo3.png)
+##### Option 2: Open .vcd file using GTKwave
+```
+open -a gtkwave
+```
+###### Select 'File' -> 'Open New Tab' -> select .vcd file
+![gtkwave](gtkwave.png)
 
 ### Synthesis with [Yosys](https://yosyshq.net/yosys/)
 #### [Installation](https://github.com/YosysHQ/yosys)
@@ -97,25 +103,53 @@ source <extracted_location>/oss-cad-suite/environment
 yosys
 ```
 ![yosys](yosys_demo.png)
-Here are some commands I use for synthesis, have to be in this sequence
+##### Here are some commands I use for synthesis, have to be in this sequence
 ```
 #read design
 read_verilog <file1.v> <file2.v> <file3.v>
-
+```
+![yosys1](read_verilog.png)
+```
 #elaborate design hierarchy
 hierarchy -check -top <name of top verilog file>
-
+```
+![yosys2](hierarchy.png)
+```
 #the high-level stuff, each of them can be one command separately
 proc; opt; fsm; opt; memory; opt
+```
+![yosys3](proc.png)
 
+```
 #write synthesized design
 #this command generates synthesized_design.v file
 write_verilog <name of synthesized_design.v>
-
 ```
+![yosys4](write_verilog.png)
 For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
 
-![yosys1](read_verilog.png)
-![yosys2](hierarchy.png)
-![yosys4](proc.png)
-![yosys4](write_verilog.png)
+### Generate RTL Schematic with graphviz or JSON file
+#### Installation
+##### Option 1: install graphviz
+```
+brew install graphviz
+```
+##### Option 2: install netlistsvg with npm
+```
+brew install node
+npm install -g netlistsvg
+```
+
+#### Demo
+##### Option 1: Using graphviz
+##### Inside yosys console, run
+```
+show -format dot
+```
+![show](show.png)
+##### It will generate the hiddent .dot file with the path to that file, just follow it to find the file as it will not show up in the current directory
+##### I moved my .dot file to the this directory, then run the following command in my main shell
+```
+dot -Tpng <file.dot> -o <outputfile.png>
+```
+![dot](output1.png)
