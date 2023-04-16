@@ -147,9 +147,25 @@ npm install -g netlistsvg
 show -format dot
 ```
 ![show](show.png)
-##### It will generate the hiddent .dot file with the path to that file, just follow it to find the file as it will not show up in the current directory
+##### It will generate the hidden .dot file with the path to that file, just follow it to find the file as it will not show up in the current directory
 ##### I moved my .dot file to the this directory, then run the following command in my main shell
 ```
 dot -Tpng <file.dot> -o <outputfile.png>
 ```
 ![dot](output1.png)
+
+##### Option 2: Using JSON file
+##### This is my favorite method because it generate more electronic looking of the schematic
+##### Inside yosys console, run
+```
+write_json <input_json_file.json>
+```
+![json](write_json.png)
+
+##### It will generate a JSON file right in the current directory so it is more convenient.
+##### In the directory with the JSON file of the main shell, run
+```
+netlistsvg <input_json_file.json> -o <output_svg_file.svg>
+```
+##### Double click on the new generated .svg file
+![svg](svg.png)
