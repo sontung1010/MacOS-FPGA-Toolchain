@@ -53,7 +53,7 @@ $dumpfile(<name of simulation file.vcd>);
 $dumpvars;
 ```
 ![sim_file](sim_file.png)
-##### then run
+##### then run the following command to generate .vcd file
 ```
 vvp <name of result file>
 ```
@@ -61,9 +61,22 @@ vvp <name of result file>
 
 ### Demo Simulation with VSCode or GTKwave
 #### Installation
-##### Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.)
-##### Or install gtkwave using brew
+##### Option 1: Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.) then install the [TerosHDL extension](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl) or [WaveTrace extention](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace)
+##### Option 2: Using gtkwave using brew
 ```
 brew install --cask gtkwave
 ```
 #### Demo
+##### Option 1: Open .vcd file using VSCode
+###### Using TerosHDL: Open VSCode using the following command then right click on .vcd file, select ""
+```
+code .
+```
+![demo1](vscode_demo1)
+![demo2](vscode_demo2)
+###### Using WaveTrace, this will run automatically, but the free version only show up to 8 variables
+```
+code sim.vcd
+```
+![demo3](vscode_demo3)
+
