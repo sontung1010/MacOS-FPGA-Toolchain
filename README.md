@@ -46,3 +46,14 @@ iverilog -o <name of result file> -c file_list.txt
 
 ![iverilog2](iverilog_demo2.png)
 
+#### Run Simulation
+##### Note: remember to put the name of simulation file in test verilog file in follow format:
+```
+$dumpfile(<name of simulation file.vcd>);
+$dumpvars;
+```
+![sim_file](sim_file.png)
+##### then run
+```
+vvp <name of result file>
+```
