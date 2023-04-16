@@ -6,7 +6,7 @@
 #### Afterall, the only missing piece is the tool that support my case, my Nexys A7 board, to generate the .bit file. After that, I can totally upload the .bit file to the board.
 
 ## Workflow and Installation
-### Write code using Vim with [Verilog syntax](https://github.com/vhda/verilog_systemverilog.vim)
+### 1.Write code using Vim with [Verilog syntax](https://github.com/vhda/verilog_systemverilog.vim)
 #### Installation
 ##### Using vim-plug
 
@@ -23,7 +23,7 @@ vim ALU_design.v
 
 ![Vim](vim.png)
 
-### Compile code with [Icarus Verilog](https://github.com/steveicarus/iverilog)
+### 2.Compile code with [Icarus Verilog](https://github.com/steveicarus/iverilog)
 #### [Installation](https://iverilog.fandom.com/wiki/Installation_Guide)
 ##### Using [homebrew](https://brew.sh/)
 
@@ -62,7 +62,7 @@ vvp <name of result file>
 ```
 ![sim_demo](sim_demo.png)
 
-### Demo Simulation with VSCode or GTKwave
+### 3.Demo Simulation with VSCode or GTKwave
 #### Installation
 ##### Option 1: Using VSCode by following this [instruction](https://code.visualstudio.com/docs/setup/mac#:~:text=Drag%20Visual%20Studio%20Code.app,choosing%20Options%2C%20Keep%20in%20Dock.), then install the [TerosHDL extension](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl) or [WaveTrace extention](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace)
 ##### Option 2: Using gtkwave using brew
@@ -89,7 +89,7 @@ open -a gtkwave
 ###### Select 'File' -> 'Open New Tab' -> select .vcd file
 ![gtkwave](gtkwave.png)
 
-### Synthesis with [Yosys](https://yosyshq.net/yosys/)
+### 4.Synthesis with [Yosys](https://yosyshq.net/yosys/)
 #### [Installation](https://github.com/YosysHQ/yosys)
 ##### Read more about OSS CAD Suite by YosysHQ [here](https://github.com/YosysHQ/oss-cad-suite-build)
 ##### Go to this [OSS CAD Suite release link](https://github.com/YosysHQ/oss-cad-suite-build/releases) and download your compatible version then extract it
@@ -131,7 +131,7 @@ write_verilog <name of synthesized_design.v>
 ![yosys4](write_verilog.png)
 ##### For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
 
-### Generate RTL Schematic with graphviz or JSON file
+### 5.Generate RTL Schematic with graphviz or JSON file
 #### Installation
 ##### Option 1: install graphviz
 ```
@@ -173,11 +173,11 @@ netlistsvg <input_json_file.json> -o <output_svg_file.svg>
 ##### Double click on the new generated .svg file
 ![svg](svg.png)
 
-### Generate Bitstream (still in progress for Xilinx Nexys A7)
+### 6.Generate Bitstream (still in progress for Xilinx Nexys A7)
 #### Please check [F4PGA](https://github.com/f4pga) for more information about other boards bitstream generation.
 #### Currently, the only way to generate bitstream is to install a virtual machine of Ubuntu or Window on your Mac run Vivado on there to get the .bit file, which defeats the purpose of this research. Also, keep in mind that Vivado can only be installed on amd architecture, which means if you are using an M1 Mac just like me, there are no solutions yet.
 
-### Upload the .bit file to the board with [openFPGALoader](https://github.com/trabucayre/openFPGALoader) (supposing you have a .bit file somehow)
+### 7.Program the .bit file to the board with [openFPGALoader](https://github.com/trabucayre/openFPGALoader) (supposing you have a .bit file somehow)
 #### In this part, I test by getting the .bit file from my Vivado on other PC.
 #### Installation
 ```
