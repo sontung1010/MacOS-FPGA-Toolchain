@@ -25,7 +25,7 @@ vim ALU_design.v
 
 ### Compile code with [Icarus Verilog](https://github.com/steveicarus/iverilog)
 #### [Installation](https://iverilog.fandom.com/wiki/Installation_Guide)
-##### Using homebrew
+##### Using [homebrew](https://brew.sh/)
 
 ```
 brew install icarus-verilog
@@ -129,7 +129,7 @@ proc; opt; fsm; opt; memory; opt
 write_verilog <name of synthesized_design.v>
 ```
 ![yosys4](write_verilog.png)
-For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
+##### For more command information, please read this [YosysHQ link](https://yosyshq.net/yosys/)
 
 ### Generate RTL Schematic with graphviz or JSON file
 #### Installation
