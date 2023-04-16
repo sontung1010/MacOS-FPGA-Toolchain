@@ -21,7 +21,7 @@
 
 
 module EightBitSubtractor(RCODiff, RCOBorrowOut, RCOSubX, RCOSubY, RCOBorrowIn);
-    output [15:0] RCODiff;
+    output [7:0] RCODiff;
     output RCOBorrowOut;
     input [7:0] RCOSubX;
     input [7:0] RCOSubY;

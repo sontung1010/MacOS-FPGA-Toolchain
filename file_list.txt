@@ -1,0 +1,12 @@
+ALU_Design.v
+comparator.v
+DispOut.v
+EightBitAdder.v
+EightBitSubtractor.v
+EightMux.v
+FullSubtractor.v
+HalfSubtractor.v
+InputRead.v
+mux2to1.v
+muxAN.v
+SevenSegments.v

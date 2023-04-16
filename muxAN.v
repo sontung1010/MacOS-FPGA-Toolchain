@@ -21,7 +21,7 @@
 
 
 module muxAN(out, in, btn);
-    input [7:0] in;
+    input [8:0] in;
     output [7:0] out;
     input btn;
     
